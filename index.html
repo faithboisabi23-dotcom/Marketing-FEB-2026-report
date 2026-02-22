@@ -17,7 +17,7 @@
                 <h1>Doctor Referral Performance – February 1–14, 2026</h1>
                 <p>Full dataset</p>
             </div>
-            <img class="logo" src="./assets/sonar-logo.png" alt="Sonar logo" />
+            <img class="logo" src="./sonar-logo.png" alt="Sonar logo" />
         </div>
     </header>
 
@@ -187,7 +187,7 @@
 
         const loadData = async () => {
             try {
-                const resp = await fetch(`./data/doctor_referrals_with_revenue.json?v=${Date.now()}`, { cache: 'no-cache' });
+                const resp = await fetch(`./doctor_referrals_with_revenue.json?v=${Date.now()}`, { cache: 'no-cache' });
                 if (resp.ok) return resp.json();
             } catch (_) { /* fall back */ }
             return window.doctorRevenueData || { high: [], low: [], totals: {} };
